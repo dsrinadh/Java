@@ -69,6 +69,6 @@ class Over{
         d.work();
         System.out.println("Salary of the Developer: " + d.calculateSalary());
         i.work();
-        System.err.println("Salary of the INtern person:" + i.calculateSalary());
+        System.err.println("Salary of the Intern person:" + i.calculateSalary());
     }
 }
