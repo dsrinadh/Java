@@ -1,0 +1,20 @@
+class Demo{
+    final void display(){
+        String name="Srinadh";
+        System.out.println("Name of the Student " + name );
+    }
+}
+class Demo1 extends Demo{
+    void display(){
+        System.out.println("Overridden Method");
+    }
+}
+
+
+class FinalDemo{
+    public static void main(String[] args) {
+        Demo1 d=new Demo1();
+        d.display();
+        
+    }
+}
