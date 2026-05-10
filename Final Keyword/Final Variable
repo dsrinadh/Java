@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+
+class FinalDemo{
+    public static void main(String[] args){
+        final float pi=3.14f;
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        pi=a;
+    }
+} 
