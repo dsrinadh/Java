@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class Payment{
+	void makepayment(int cardNumber, int cvv){
+		System.out.println("cardNumber: " + cardNumber);
+		System.out.println("cvv: " + cvv);
+	}
+	
+	void makepayment(String UpiId){
+		System.out.println("UPI: " + UpiId);
+	}
+	
+	void makepayment(double amount){
+		System.out.println("Amount: " + amount);
+	}
+	
+	public static void main(String[] args){
+		Scanner s1=new Scanner(System.in);
+		Payment p1=new Payment();
+		
+		System.out.println("1.Pay using Card" + " 2.Pay using Upi" + " 3.Pay using Cash");
+		
+		System.out.println("Enter your choice");
+		int ch=s1.nextInt();
+		switch(ch){
+			case 1: p1.makepayment(1221, 666);
+					break;
+			case 2: p1.makepayment("8888@ibl");
+					break;
+			case 3: p1.makepayment(800.0);
+					break;
+			default: System.out.println("Invalid option");
+					
+		}
+		
+	}
+}
