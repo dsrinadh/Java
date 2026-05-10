@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class Catch1{
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		try{
+			System.out.print("Enter the size of array: ");
+			int n=sc.nextInt();
+			int arr[] = new int[n];
+			
+			
+			for(int i=0;i<=n;i++){
+				System.out.print("Enter the array element of index " + i +":");
+				arr[i]=sc.nextInt();
+			}
+			
+			System.out.print("Enter index: ");
+			int index=sc.nextInt();
+			System.out.print("Enter divisor: ");
+			int divisor=sc.nextInt();
+			
+			int result= arr[index]/divisor;
+			System.out.println("Result: " + result );
+			
+		}
+		catch(ArrayIndexOutOfBoundsException e){
+			System.out.println("Invalid expection");
+		}
+		catch(ArithmeticException e){
+			System.out.println("Number cannot divide by zero");
+		}
+		catch(Exception e){
+			System.out.println("Exception");
+		}
+	}
+}
