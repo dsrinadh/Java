@@ -1,0 +1,16 @@
+import calculator.Arithemtic;
+import exponent.Power;
+
+class PackageDemo{
+    public static void main(String[] args){
+        Arithmetic a = new Arithmetic();
+        Power p = new Power();
+
+        System.out.println("Addition of Number= " + a.add(10,5));
+        System.out.println("Subtraction of =" + a.sub(20,10));
+        System.out.println("MUltipication of NUmber = " + a.mul(10,5));
+        System.out.println("DIvision of NUmber= " + a.div(18,2));
+        System.out.println("Sqaure of NUmber= " + p.Sqaure(5));
+        System.out.println("Cube of NUmber= " + p.cube(3));
+    }
+}
