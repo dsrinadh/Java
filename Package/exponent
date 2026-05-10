@@ -1,0 +1,10 @@
+package exponent;
+// Creating Exponent Package
+public class Power{
+    public int square(int n){
+        return n*n;
+    }
+    public int cube(int n){
+        return n*n*n;
+    }
+}
