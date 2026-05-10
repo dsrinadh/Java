@@ -1,0 +1,33 @@
+public class SleepTest extends Thread {
+    public void run() {
+        for (char ch = 'A'; ch<='Z'; ch++ ) {
+            try {
+                System.out.println(ch + " ");
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+        }
+    }
+}
+class SleepTest2 extends Thread {
+    public void run() {
+        for (int i = 5; i < 10; i++) {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+            System.out.println(i);
+        }
+    }
+}
+public class MultiThread{
+      public static void main(String args[]) {
+        SleepTest t1 = new SleepTest();
+        SleepTest2 t2 = new SleepTest2();
+        t1.start();
+        t2.start();
+    }
+}
+
