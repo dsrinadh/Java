@@ -1,0 +1,23 @@
+class Animal{
+	void makeSound(){
+		System.out.println("Animal makes a sound:" );
+	}
+}
+class dog extends Animal{
+	void makeSound(){
+		System.out.println("Dog barks:");
+	}
+}
+class cat extends Animal{
+	void makeSound(){
+		System.out.println("Cat Sound meow");
+	}
+}
+public class Dynamic{
+	public static void main(String[] args){
+		Animal d=new dog();
+		Animal c=new cat();
+		d.makeSound();
+		c.makeSound();
+	}
+}
