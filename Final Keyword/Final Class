@@ -1,0 +1,16 @@
+final class Demo{
+    void display(){
+        System.out.println("This is Final Class");
+    }
+}
+class Demo1 extends Demo{
+    void display(){
+    System.out.println("This is child of Final Class");
+    }
+}
+
+class FinalClassDemo{
+    public static void main(String[] args){
+        Demo d=new Demo();
+    }
+}
