@@ -1,0 +1,20 @@
+// Custom exception class
+class InsufficientBalanceException extends RuntimeException {
+    public InsufficientBalanceException(String message) {
+        super(message);
+    }
+}
+public class CustomUncheckedException {
+    static void withdraw(double balance, double amount) {
+        if (amount > balance) {
+          
+            throw new InsufficientBalanceException("Insufficient balance for withdrawal!");
+        }else{
+        System.out.println("Withdrawal successful! Remaining: " + (balance - amount));
+		}
+    }
+
+    public static void main(String[] args) {
+       withdraw(500, 1000);
+    }
+}
