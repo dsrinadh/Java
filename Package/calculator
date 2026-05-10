@@ -2,7 +2,7 @@ package calculator;
 //Creating calculator Package
 
 
-public class DoubleCalculator
+public class Arithemtic
 {
 	public double add(double a, double b)
 	{
