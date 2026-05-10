@@ -1,0 +1,41 @@
+class Flight extends Thread {
+    private String flightName;
+
+    Flight(String flightName) {
+        this.flightName = flightName;
+    }
+
+    public void run() {
+        System.out.println(flightName + " is landing...");
+
+        try {
+            Thread.sleep(2000);  // reduced time for testing
+        } catch (Exception e) {
+            System.out.println("Exception: " + e);
+        }
+
+        System.out.println(flightName + " has landed successfully");
+    }
+}
+
+public class ThreadP {
+    public static void main(String[] args) {
+
+        Flight emergencyFlight = new Flight("Emergency Flight");
+        Flight vipFlight = new Flight("VIP Flight");
+        Flight commercialFlight = new Flight("Commercial Flight");
+        Flight cargoFlight = new Flight("Cargo Flight");
+
+        // Set priorities
+        emergencyFlight.setPriority(10);
+        vipFlight.setPriority(8);
+        commercialFlight.setPriority(5);
+        cargoFlight.setPriority(1);
+
+        // Start threads
+        emergencyFlight.start();
+        vipFlight.start();
+        commercialFlight.start();
+        cargoFlight.start();
+    }
+}
