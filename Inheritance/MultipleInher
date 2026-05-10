@@ -1,0 +1,23 @@
+interface Camera{
+	void takePhoto();
+}
+interface MusicPlayer{
+	void PlayMusic();
+}
+
+class SmartPhone1 implements Camera,MusicPlayer{
+	public void takePhoto(){
+		System.out.println("Camera is Clicking photo");
+	}
+	public void PlayMusic(){
+		System.out.println("MusicPlayer is playing the song");
+	}
+}
+class SmartPhone{
+	public static void main(String[] args){
+		
+		SmartPhone1 s1=new SmartPhone1();
+		s1.takePhoto();
+		s1.PlayMusic();
+	}
+}
