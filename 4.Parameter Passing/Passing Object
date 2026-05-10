@@ -1,0 +1,22 @@
+
+class Studentt {
+    String name;
+    Studentt(String name) {
+        this.name = name;
+    }
+}
+
+class PassObject {
+    public static void changeName(Studentt s) {
+        s.name = "Bye"; 
+    }
+
+    public static void main(String[] args) {
+        Studentt s1 = new Studentt("Hello");
+        System.out.println("Name= " + s1.name);
+        
+        changeName(s1);
+        
+        System.out.println("Name= " + s1.name);
+    }
+}
